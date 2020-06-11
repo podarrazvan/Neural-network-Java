@@ -4,36 +4,18 @@ import java.util.Arrays;
 public class DotProduct {
 
     public static double[] dot_product(double[][] first, double[] second){
-        /*Facem un sir de marimea tipului de sir weights.
-         Spre exemplu putem avea un sir 3d. In cazul acesta
-         vom avea product de marime 3. Vom stoca in el 3 elemente
-         dim cauza ca inmultim cele 3 siruri din al doilea sir
-         cu primul sir. Din acest motiv trebuie sa fie de marime 3.
-         */
+    
         double[] product = new double[first.length];
-        /*Fiecare sir din cele 3 trebuie inmultit odata,
-        element cu element.
-         */
+        
         for(int i = 0; i<first.length; i++){
-            // resetam produsul
+       
             double produsul = 0;
-            /*
-            Daca inainte ne interesa cate siruri contine primul sir, acum ne
-            intereseaza cate elemente contine al doilea sir. Toate sirurile trebuie
-            sa contina un numar egal de elemente.
-            Apoi inmultim element cu element si adunam rezultatele.
-             */
+            
             for(int y = 0; y < second.length; y++) {
-                /*
-                Produsului (produsul) ii adaugam rezultatul inmultirii a doua siruri.
-                 */
+            
                 produsul += first[i][y] * second[y];
             }
-            /*
-            Cand y ajunge egal cu numarul de elemente dintr-un sir, adica am inmultit toate
-            elementele dintre doua siruri intre ele, i++ si trece la sirur urmator pana le termina pe toate.
-            Dar mai intai adauga rezultatul adunarii produselor (produsul) sirurlui facut la primul pas.
-             */
+         
             product[i] = produsul;
         }
         return product;
