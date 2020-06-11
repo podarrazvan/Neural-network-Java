@@ -31,11 +31,7 @@ public class calcul {
     public static double[][] sum(double[][]first, double[]second){
 
         double[][]sum = new double[first.length][first[0].length];
-        /*
-        Fiecarui element obtinut la dot_product (product) ii adaugam
-        un element din sirul baiases.
-         */
-
+   
         for (int i = 0; i < first.length; i++) {
             for(int y = 0; y<first[0].length ; y++) {
                 sum[i][y] = first[i][y] + second[y];
