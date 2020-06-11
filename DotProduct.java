@@ -47,25 +47,22 @@ public class DotProduct {
 
             }
         }
-      //  System.out.println(Arrays.deepToString(T_first));
-      //  System.out.println(Arrays.deepToString(second));
         int r1 = T_first.length, c1 = T_first[0].length;
         int r2 = second.length, c2 = second[0].length;
-    //  System.out.println(r1 + " "+ c1 + " " + c2);
+    
         double[][] product = new double[c1][c1];
-        for(int i = 0; i < c1; i++){ //max 4
-            for(int j = 0; j < c1; j++){ //max 4
-                for(int k = 0; k < r1; k++){ // max 4
-//                    System.out.println( T_first[k][i]  +" "+ second[j][k]);
+        for(int i = 0; i < c1; i++){ 
+            for(int j = 0; j < c1; j++){ 
+                for(int k = 0; k < r1; k++){
+
                     product[j][i] += T_first[k][i] * second[j][k];
-                    //DA EROARE DACA MAI BAGI UN NEURON!
+
 
                 }
-//                System.out.println();
+
             }
         }
 
-//      System.out.println(Arrays.deepToString(product));
         return product;
     }
 
